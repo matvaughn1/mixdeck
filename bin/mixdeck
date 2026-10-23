@@ -1,0 +1,4 @@
+#!/bin/sh
+# Start Mixdeck from this checkout (works through the ~/.local/bin symlink).
+DIR="$(dirname "$(readlink -f "$0")")/.."
+PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}" exec python3 -m mixdeck "$@"
